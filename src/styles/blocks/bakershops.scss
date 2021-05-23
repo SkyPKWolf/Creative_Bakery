@@ -1,0 +1,98 @@
+.bakershops {
+  background-color: #f1cc9d;
+  padding: 27px 30px;
+  @media (max-width: $break-point-mobile) {
+    padding: 27px $mobile-side-padding;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 87px;
+
+    @media (max-width: $break-point-tablet) {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__search {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    justify-content: center;
+
+    @media (max-width: $break-point-tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    border-bottom: 1px solid $main-font-color;
+    opacity: 0.5;
+
+    &--city {
+      width: 175px;
+
+      @media (max-width: $break-point-tablet) {
+        width: 80%;
+      }
+      @media (max-width: $break-point-mobile) {
+        width: 100%;
+      }
+    }
+
+    &--address {
+      width: 325px;
+
+      @media (max-width: $break-point-tablet) {
+        width: 80%;
+      }
+      @media (max-width: $break-point-mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    @extend %button;
+
+    @media (max-width: $break-point-tablet) {
+      margin: 0 auto;
+    }
+  }
+
+  &__image {
+    margin-top: 67px;
+    width: 90%;
+
+    @media (max-width: $break-point-tablet) {
+      margin-top: 25px;
+    }
+  }
+
+  &__zoom-map {
+    margin-top: 20px;
+    display: none;
+    justify-content: center;
+    @media (max-width: $break-point-tablet) {
+      display: flex;
+      gap: 40px;
+    }
+  }
+
+  &__zoom-button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+  }
+}
