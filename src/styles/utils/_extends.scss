@@ -20,7 +20,7 @@
   cursor: pointer;
   border: 2px solid $main-page-color;
   transition: 0.2s linear;
-  transition-property: background-color opacity;
+  transition-property: background-color, opacity;
 
   &:hover {
     background-color: #fff;
@@ -36,7 +36,7 @@
   cursor: pointer;
   border: 2px solid #f1cc9d;
   transition: 0.2s linear;
-  transition-property: background-color opacity;
+  transition-property: background-color, opacity;
 
   &:hover {
     background-color: #fff;

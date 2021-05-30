@@ -9,7 +9,11 @@
   </head>
   <body class="page">
     <header class="header">
-      <div class="header__background"></div>
+      <div class="header__background-sliders">
+        <span class="header__background header__background-showing"></span>
+        <span class="header__background"></span>
+        <span class="header__background"></span>
+      </div>
       <div class="header__container">
         <div class="header__top">
           <a href="#">
@@ -52,16 +56,21 @@
             <h1 class="header__main-title">Creative bakery</h1>
             <p class="header__text">
               We bake your fantasies: croissants <br>
-              cakes, cookies, and cupcakes.
+              cakes, cookies, and cupcakes. <br>
+              <span class="header__hiddenText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo sunt
+                laudantium maxime odio. Temporibus nostrum molestiae quae deleniti debitis dolore
+                provident ipsam! Modi, ipsa!
+              </span>
             </p>
-            <a href="#" class="header__button">Learn more</a>
+            <a class="header__button">Learn more</a>
           </div>
           <div class="header__right-bottom">
-            <button class="header__switch"></button>
+            <button class="header__switchPrev header__switchPrev--passive"></button>
             <div class="header__number header__number--active">01</div>
             <div class="header__number">02</div>
             <div class="header__number">03</div>
-            <button class="header__switch header__switch--active"></button>
+            <button class="header__switchNext header__switchNext--active"></button>
           </div>
         </div>
       </div>
@@ -82,13 +91,11 @@
             </div>
           </div>
           <div class="product__wrapper">
-            <button class="product__switch"></button>
             <img
               src="./images/1.png"
               alt="cookies"
               class="product__image"
             >
-            <button class="product__switch product__switch--active"></button>
           </div>
         </div>
         <div class="bakery__product product product--revers">
@@ -104,13 +111,11 @@
             </div>
           </div>
           <div class="product__wrapper product__wrapper--revers">
-            <button class="product__switch"></button>
             <img
               src="./images/2.png"
               alt="Cakes"
               class="product__image"
             >
-            <button class="product__switch product__switch--active"></button>
           </div>
         </div>
         <div class="bakery__product product">
@@ -126,13 +131,11 @@
             </div>
           </div>
           <div class="product__wrapper">
-            <button class="product__switch"></button>
             <img
               src="./images/3.png"
               alt="Croissants"
               class="product__image"
             >
-            <button class="product__switch product__switch--active"></button>
           </div>
         </div>
         <div class="bakery__product product product--revers">
@@ -148,13 +151,53 @@
             </div>
           </div>
           <div class="product__wrapper product__wrapper--revers">
-            <button class="product__switch"></button>
             <img
               src="./images/4.png"
               alt="Cupcakes"
               class="product__image"
             >
-            <button class="product__switch product__switch--active"></button>
+          </div>
+        </div>
+
+        <div class="bakery__product product product--hidden">
+          <div class="product__discription">
+            <h3 class="product__title">Cookies</h3>
+            <h4 class="product__subtitle">Chocolate mix</h4>
+            <p class="product__text">Oatmeal cookies with golden raisins, orange zest and chocolate
+              chips.
+            </p>
+            <div class="product__button-price">
+              <span class="product__price">$4</span>
+              <span class="product__amount">100 g</span>
+            </div>
+          </div>
+          <div class="product__wrapper">
+            <img
+              src="./images/1.png"
+              alt="cookies"
+              class="product__image"
+            >
+          </div>
+        </div>
+
+        <div class="bakery__product product product--hidden product--revers">
+          <div class="product__discription">
+            <h3 class="product__title">Cakes</h3>
+            <h4 class="product__subtitle">Mint coffee mocca</h4>
+            <p class="product__text">Chocolate biscuit coffee cake topped with a mint buttercream
+              and powder.
+            </p>
+            <div class="product__button-price">
+              <span class="product__price">$5</span>
+              <span class="product__amount">100 g</span>
+            </div>
+          </div>
+          <div class="product__wrapper product__wrapper--revers">
+            <img
+              src="./images/2.png"
+              alt="Cakes"
+              class="product__image"
+            >
           </div>
         </div>
         <button class="bakery__button">All bakeries</button>
@@ -275,6 +318,7 @@
               <h3 class="contacts__subtitle">Get in touch</h3>
               <div class="contacts__info-container">
                 <a
+                  rel="noopener"
                   target="_blank"
                   href="https://www.google.com.ua/maps/search/Bakerlab+Head+Office+Ukraine,+Kyiv,+Holosiivska+St,+53/@50.3974538,30.5103708,17z/data=!3m1!4b1?hl=ru"
                   class="contacts__text"
@@ -431,6 +475,7 @@
           </div>
           <div class="footer__icons">
             <a
+              rel="noopener"
               target="_blank"
               href="https://twitter.com/?lang=ru"
               class="footer__icon-link"
@@ -442,6 +487,7 @@
               >
             </a>
             <a
+              rel="noopener"
               target="_blank"
               href="https://uk-ua.facebook.com/"
               class="footer__icon-link"
@@ -453,6 +499,7 @@
               >
             </a>
             <a
+              rel="noopener"
               target="_blank"
               href="https://www.linkedin.com/"
               class="footer__icon-link"

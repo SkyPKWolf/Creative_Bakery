@@ -3,26 +3,44 @@
   z-index: -1;
   background-color: $main-page-color;
   height: 100vh;
+  min-height: 600px;
 
   @media (max-width: $break-point-tablet) {
     background-color: $c-gray;
+  }
+
+  &__background-sliders {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -3;
   }
 
   &__background {
     position: absolute;
     height: 100%;
     min-width: 70vw;
-    z-index: -2;
-    background-image: url("./../images/bake-cream-puff-cup.png");
+    opacity: 0;
+    transition: 0.3s;
     background-size: cover;
     background-position: center;
 
+    &:nth-of-type(1) {
+      background-image: url("./../images/bake-cream-puff-cup.png");
+    }
+    &:nth-of-type(2) {
+      background-image: url("./../images/baked-bakery-baking.png");
+    }
+    &:nth-of-type(3) {
+      background-image: url("./../images/bread-croissant-cup.png");
+    }
+
+    &-showing {
+      opacity: 1;
+    }
+
     @media (max-width: $break-point-tablet) {
       min-width: 100%;
-      opacity: 0.8;
-    }
-    @media (min-width: 2000px) {
-      min-width: 60%;
     }
   }
 
@@ -195,9 +213,18 @@
     font-size: 26px;
     line-height: 39px;
     margin-bottom: 25px;
+    width: 80%;
 
     @media (max-width: $break-point-mobile) {
       font-size: 16px;
+    }
+  }
+  
+  &__hiddenText {
+    display: none;
+
+    &--showing {
+      display: inline-block;
     }
   }
 
@@ -224,27 +251,59 @@
     }
 
   }
-  &__switch {
+  &__switchPrev {
     height: 16px;
     width: 26px;
     margin-right: 10px;
-    background-image: url("./../images/passive.svg");
     background-size: cover;
     cursor: pointer;
+    margin-top: 35px;
 
     @media (max-width: $break-point-tablet) {
       transform: rotate(-90deg);
       margin: 0;
     }
 
+    &--passive {
+      background-image: url("./../images/passive.svg");
+    }
+
     &--active {
       background-image: url("./../images/active.svg");
-      margin-top: 35px;
+      transform: rotate(-180deg);
 
       @media (max-width: $break-point-tablet) {
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
         margin: 0;
       }
+    }
+  }
+
+  &__switchNext {
+    height: 16px;
+    width: 26px;
+    margin-right: 10px;
+    background-size: cover;
+    cursor: pointer;
+    margin-top: 35px;
+
+    @media (max-width: $break-point-tablet) {
+      transform: rotate(-90deg);
+      margin: 0;
+    }
+
+    &--passive {
+      background-image: url("./../images/passive.svg");
+      transform: rotate(-180deg);
+
+      @media (max-width: $break-point-tablet) {
+        transform: rotate(90deg);
+        margin: 0;
+      }
+    }
+
+    &--active {
+      background-image: url("./../images/active.svg");
     }
   }
 

@@ -7,6 +7,13 @@
     grid-template-columns: 1fr;
   }
 
+  transition: 2s opacity linear;
+
+  &--hidden {
+    opacity: 0;
+    display: none;
+  }
+
   &--revers {
     grid-template-columns: 1fr 320px;
 
@@ -120,24 +127,12 @@
     }
   }
 
-  &__switch {
-    height: 16px;
-    width: 26px;
-    background-image: url("./../images/passive.svg");
-    background-size: cover;
-    cursor: pointer;
-    transform: rotate(-90deg);
-
-    &--active {
-      background-image: url("./../images/active.svg");
-    }
-  }
   &__image {
     max-width: 60%;
     transition: 0.3s transform linear;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
     @media (max-width: $break-point-mobile) {
       min-width: 230px;
